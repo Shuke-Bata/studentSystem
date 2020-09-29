@@ -17,13 +17,15 @@ public class Util {
         try {
             System.out.println("开始加载驱动。。。。");
             Class.forName("com.mysql.jdbc.Driver");
+            //mysql 8
+           // Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("驱动加载成功。。。。\n开始链接！");
             /*String url = "jdbc:mysql://localhost:3306/student?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false";
             String user = "root";
-            String password = "zmhjrR@512";*/
-            String url = "jdbc:mysql://121.36.58.0:3306/student?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=10";
+            String password = "密码";*/
+            String url = "jdbc:mysql://IP:3306/student?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=10";
             String user = "root";
-            String password = "zmh_jrR@512";
+            String password = "密码";
             connection = DriverManager.getConnection(url, user, password);
             System.out.println("数据库连接成功");
 
