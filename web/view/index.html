@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息管理系统</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<div class="total">
+    <!--表格主体-->
+    <div id="main">
+
+        <!--  头部  -->
+        <div class="header">
+
+            <h2 class="header-content">学生信息管理系统</h2>
+
+            <div class="header-buttons">
+                <input type="button" class="green-button header-button" value="新增" id="add">
+                <input type="button" class="red-button header-button" value="删除" id="delete">
+                <input type="button" class="green-button search-button" value="查询" id="search">
+            </div>
+        </div>
+
+        <!--  主体内容  -->
+        <div class="content">
+
+            <table class="student-table" id="student-table">
+                <tr>
+                    <th><input type="checkbox" id="choose-all"></th>
+                    <th>序号</th>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>学院</th>
+                    <th>专业</th>
+                    <th>年级</th>
+                    <th>班级</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </table>
+        </div>
+
+        <!--  页脚  -->
+        <div class="footer">
+
+            <div class="footer-message" id="message">
+
+            </div>
+
+            <div class="footer-buttons" id="foot-buttons">
+                <input type="button" class="green-button footer-button" value="上一页" id="previous">
+                <input type="button" class="red-button footer-button" value="下一页" id="next">
+            </div>
+        </div>
+
+    </div>
+
+    <!--处理学生信息-->
+    <div id="deal-information">
+
+        <div class="deal-information-head">
+            <h4 id="deal-information-title">新增学生信息</h4>
+        </div>
+
+        <div class="deal-information-body">
+            <ul class="deal-information-body-content">
+                <li>
+                    学号 <input type="number" id="number" class="deal-input" placeholder="学号">
+                </li>
+                <li>
+                    姓名 <input type="text" id="name" class="deal-input" placeholder="姓名">
+                </li>
+                <li>
+                    学院 <input type="text" id="college" class="deal-input" placeholder="学院" name="xue-yuan"
+                              list="xue-yuan">
+                    <datalist id="xue-yuan">
+                        <option value="计算机科学与工程学院">计算机科学与工程学院</option>
+                        <option value="会计学院">会计学院</option>
+                        <option value="理学院">理学院</option>
+                        <option value="人工智能学院">人工智能学院</option>
+                    </datalist>
+                </li>
+                <li>
+                    专业 <input type="text" id="major" class="deal-input" placeholder="专业" name="zhuan-ye"
+                              list="zhuan-ye">
+                    <datalist id="zhuan-ye">
+                        <option value="软件工程">软件工程</option>
+                        <option value="会计学">会计学</option>
+                        <option value="数学">数学</option>
+                        <option value="大数据">大数据</option>
+                    </datalist>
+                </li>
+                <li>
+                    年级 <input type="text" id="grade" class="deal-input" placeholder="年级">
+                </li>
+                <li>
+                    班级 <input type="text" id="class" class="deal-input" placeholder="班级">
+                </li>
+                <li>
+                    年龄 <input type="text" id="age" class="deal-input" placeholder="年龄">
+                </li>
+            </ul>
+        </div>
+
+        <div class="deal-information-foot">
+            <input type="button" class="white-button footer-button" value="取消" id="cancel">
+            <input type="button" class="green-button footer-button" value="提交" id="save">
+        </div>
+    </div>
+
+    <!--    遮罩-->
+    <div id="overlay"></div>
+
+    <!--    搜索界面-->
+    <div id="search-div">
+        <div class="search-head">
+            <h3>查询学生信息</h3>
+            <label>请选择查询方式(可多选)</label><br>
+            <label class="search-method"><input type="checkbox" value="学号" class="check-search"> 学号</label>
+            <label class="search-method"><input type="checkbox" value="姓名" class="check-search"> 姓名</label>
+            <label class="search-method"><input type="checkbox" value="学院" class="check-search"> 学院</label>
+            <label class="search-method"><input type="checkbox" value="专业" class="check-search"> 专业</label>
+            <label class="search-method"><input type="checkbox" value="年级" class="check-search"> 年级</label>
+            <label class="search-method"><input type="checkbox" value="班级" class="check-search"> 班级</label>
+            <label class="search-method"><input type="checkbox" value="年龄" class="check-search"> 年龄</label>
+        </div>
+
+        <div class="search-content">
+            <input type="search" id="search-number" class="search-input" placeholder="请输入查询学号">
+            <input type="search" id="search-name" class="search-input" placeholder="请输入查询姓名">
+            <input type="search" id="search-college" class="search-input" placeholder="请输入查询学院">
+            <input type="search" id="search-major" class="search-input" placeholder="请输入查询专业">
+            <input type="search" id="search-grade" class="search-input" placeholder="请输入查询年级">
+            <input type="search" id="search-class" class="search-input" placeholder="请输入查询班级">
+            <input type="search" id="search-age" class="search-input" placeholder="请输入查询年龄">
+        </div>
+
+        <div class="search-foot">
+            <input type="button" class="white-button footer-button" value="取消" id="cancel-search">
+            <input type="button" class="green-button footer-button" value="提交" id="save-search">
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/index.js"></script>
+
+</html>

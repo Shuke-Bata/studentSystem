@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-color: #f0ece9;
+    font: 1em 微软雅黑;
+}
+
+.total {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    height: 60px;
+}
+
+td {
+    height: 46px;
+}
+
+/*表格主体*/
+#main {
+    width: 1246px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 15%;
+}
+
+.header-content {
+    text-align: center;
+    margin: 10px;
+}
+
+.header-buttons {
+    padding: 0 0 0 20px;
+}
+
+.header-button {
+    margin: 0 0 0 20px;
+}
+
+.green-button, .red-button, .white-button {
+    border: none;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+}
+
+.green-button {
+    background-color: #fff;
+}
+
+.green-button:hover {
+    background-color: #37e6cb;
+}
+
+.red-button {
+    background-color: #fff;
+}
+
+.red-button:hover {
+    background-color: #ff4e41;
+}
+
+.white-button {
+    background-color: #fff;
+}
+
+.white-button:hover {
+    background-color: #0be7ff;
+}
+
+.search-button {
+    float: right;
+}
+
+.content {
+    height: 75%;
+    background-color: #eef1f8;
+}
+
+.student-table {
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    height: 11%;
+    display: flex;
+}
+
+.footer-message {
+    width: 38%;
+    height: 30px;
+    margin: 20px 20px 0 0;
+}
+
+.footer-buttons {
+    width: 60%;
+}
+
+.footer-button {
+    margin: 20px 20px 0 0;
+}
+
+/*处理学生信息，进行增改功能的窗口*/
+#deal-information {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -180px;
+    width: 400px;
+    height: 370px;
+    z-index: 10;
+    text-align: center;
+    background-color: #efecec;
+}
+
+.deal-information-head, .deal-information-foot {
+    height: 15%;
+}
+
+.deal-information-head {
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.deal-information-body {
+    height: 70%;
+}
+
+.deal-information-body-content > li {
+    height: 40px;
+    list-style: none;
+}
+
+.deal-input {
+    width: 200px;
+    height: 20px;
+}
+
+/*遮罩处理*/
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 700px;
+    opacity: .5;
+    background-color: #fff;
+
+}
+
+/*查询界面*/
+#search-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    margin: -300px 0 0 -180px;
+    width: 400px;
+    height: 470px;
+    z-index: 10;
+    text-align: center;
+    background-color: #95ede9;
+}
+
+.search-head {
+    height: 25%;
+    line-height: 40px;
+}
+
+.search-method:hover {
+    color: #59a0ff;
+    cursor: pointer;
+}
+
+.search-content {
+    height: 60%;
+    line-height: 40px;
+}
+
+.search-input {
+    width: 300px;
+    height: 25px;
+    display: none;
+    /*visibility: hidden;*/
+}
+
+.search-foot {
+    height: 15%;
+}
